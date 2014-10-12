@@ -26,8 +26,8 @@ subpowerdata$Global_active_power <- as.numeric(subpowerdata$Global_active_power)
 ##	subpowerdata[,i] <- as.numeric(subpowerdata[,i])
 ## }
 
-## Open PNG graphic device as copying a plot is not an exact operation
-## Default values for width and height arguments of png function are both 480, so no need to explicitly set them)
+## Open PNG graphic device because copying a plot is not an exact operation
+## Default values for width and height arguments of png function are both 480 pixels; so no need to explicitly set them
 png("plot1.png")
 
 ## Create formatted histogram for Global_active_power

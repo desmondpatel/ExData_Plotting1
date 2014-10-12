@@ -30,13 +30,13 @@ subpowerdata$Sub_metering_2 <- as.numeric(subpowerdata$Sub_metering_2)
 subpowerdata$Sub_metering_3 <- as.numeric(subpowerdata$Sub_metering_3)
 
 ## Add new column as concatenation of Date and Time columns
-subpowerdata$datetime = paste(subpowerdata$Date, subpowerdata$Time, sep=" ")
+subpowerdata$datetime = paste(subpowerdata$Date, subpowerdata$Time, sep = " ")
   
 ## Convert the datetime column into Date/Time format
 subpowerdata <- transform(subpowerdata, datetime = strptime(subpowerdata$datetime, "%Y-%m-%d %H:%M:%S"))
 
-## Open PNG graphic device as copying a plot is not an exact operation
-## Default values for width and height arguments of png function are both 480, so no need to explicitly set them)
+## Open PNG graphic device because copying a plot is not an exact operation
+## Default values for width and height arguments of png function are both 480 pixels; so no need to explicitly set them
 png("plot3.png")
 
 ## Create formatted line graph for Sub_metering_1
